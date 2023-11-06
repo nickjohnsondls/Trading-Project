@@ -1,1 +1,2 @@
-sample commit
+  (element 0 of ((high + low )/ 2 )  ->>>>> element 50 ) / ( total num )
+
