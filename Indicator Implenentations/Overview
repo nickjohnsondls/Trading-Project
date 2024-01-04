@@ -1,1 +1,3 @@
-Each file contains a ground-built up indicator program for different stategies 
+SMA, RSI, and OS Strategies are found in strategies.py 
+plotting and printing statisitcs involving returns are found in runprog.py
+adjustable variables and strategy execution found in main.ipynb
