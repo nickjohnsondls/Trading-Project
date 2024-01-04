@@ -1,1 +1,1 @@
-# project5 - moving average
+# project5 - SMA, RSI, OS 
