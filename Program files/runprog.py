@@ -5,7 +5,7 @@ import pyalgotrade.plotter as plotter
 from pyalgotrade.stratanalyzer import sharpe
 from pyalgotrade.stratanalyzer import drawdown
 from pyalgotrade.stratanalyzer import trades
-from strategies import SMAStrategy, RSIStrategy, StochStrategy
+from strategies import SMAStrategy, RSIStrategy, StochStrategy, PairsTradingStrategy
 
 def run_strategy(StrategyClass, csv_file, ticker, initial_cash, *strategy_args):
     feed = yahoofeed.Feed(Frequency.DAY)
@@ -105,3 +105,17 @@ def run_strategy(StrategyClass, csv_file, ticker, initial_cash, *strategy_args):
         print("Min. return: %2.f %%" % (returns1.min() * 100)) 
 
     return my_strategy
+
+#feed, instrumentA, instrumentB, window_size, num_std_dev
+def run_pairs_strategy ( tickerA, tickerB, initial_cash, windowSize, num_std_dev):
+    feed = yahoofeed.Feed(Frequency.DAY)
+    feed.addBarsFromCSV(tickerA, tickerA + "_data.csv")
+    feed.addBarsFromCSV(tickerB, tickerB + "_data.csv")
+
+
+    my_strategy = PairsTradingStrategy(feed, tickerA, tickerB, 20, 2)
+    splt = plotter.StrategyPlotter(my_strategy)
+    my_strategy.getBroker().setCash(initial_cash)
+
+    my_strategy.run()
+    splt.plot()
