@@ -20,7 +20,6 @@ class SMAStrategy(strategy.BacktestingStrategy):
             return
 
         if self.entrySignal(bars):
-           ## THIS IS WHERE YOU WILL IMPLEMENT MACHINE LEARNING
             shares = int(self.getBroker().getCash() * 0.9 / bars[self.__instrument].getClose())
             self.__position = self.enterLong(self.__instrument, shares)
    
@@ -136,7 +135,6 @@ class PairsTradingStrategy(strategy.BacktestingStrategy):
         self.__bbands = bollinger.BollingerBands(self.__spread, window_size, num_std_dev)
         self.__positionA = None
         self.__positionB = None
-
 
     def onBars(self, bars):
         if len(self.__pricesA) < self.__window_size or len(self.__pricesB) < self.__window_size:
