@@ -8,7 +8,7 @@ This project involves the backtesting of four different trading strategies using
 - **Stochastic Oscillator (Stoch OS) Strategy**
 - **Pairs Trading Strategy**
 
-The backtest period spans from 2019 to 2024, and the data has been saved in CSV format for analysis.
+The backtest period spans from 2019 to 2024 for an initial portfolio value of $10,000, and the data has been saved in CSV format for analysis.
 
 ## Project Structure
 
