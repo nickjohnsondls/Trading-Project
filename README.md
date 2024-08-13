@@ -8,7 +8,7 @@ This project involves the backtesting of four different trading strategies using
 - **Stochastic Oscillator (Stoch OS) Strategy**
 - **Pairs Trading Strategy**
 
-The backtest period spans from 2019 to 2024 for an initial portfolio value of $10,000, and the data has been saved in CSV format for analysis.
+The backtest period spans from 2019 to 2024 for an initial portfolio value of $10,000 for TSLA( KO/PEP for Pairs), and the data has been saved in CSV format for analysis.
 
 ## Project Structure
 
@@ -23,28 +23,28 @@ The backtest period spans from 2019 to 2024 for an initial portfolio value of $1
 
 ## Results Summary
 
-### SMA Strategy
+### SMA Strategy(TSLA)
 - **Final Portfolio Value**: $93,142.64
 - **Cumulative Returns**: 831.43%
 - **Sharpe Ratio**: 1.03
 - **Max Drawdown**: 58.40%
 - **Total Trades**: 2
 
-### RSI Strategy
+### RSI Strategy(TSLA)
 - **Final Portfolio Value**: $38,820.39
 - **Cumulative Returns**: 288.20%
 - **Sharpe Ratio**: 0.80
 - **Max Drawdown**: 47.37%
 - **Total Trades**: 6
 
-### Stochastic Oscillator (Stoch OS) Strategy
+### Stochastic Oscillator (Stoch OS) Strategy(TSLA)
 - **Final Portfolio Value**: $23,326.99
 - **Cumulative Returns**: 133.27%
 - **Sharpe Ratio**: 0.50
 - **Max Drawdown**: 52.81%
 - **Total Trades**: 55
 
-### Pairs Trading Strategy
+### Pairs Trading Strategy(KO/PEP)
 - **Final Portfolio Value**: $11,436.75
 - **Cumulative Returns**: 14.37%
 - **Sharpe Ratio**: 0.16
